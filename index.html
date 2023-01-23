@@ -1,12 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        bebas: ["Bebas Neue", "cursive"]
+                    }
+                }
+            }
+        }
+    </script>
 </head>
+
 <body>
-    <h1>Hello tailwind</h1>
+    <div>
+        <h1 class="text-3xl font-bold  font-bebas">Hello tailwind</h1>
+        <p class="text-2xl font-sans">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit itaque aliquam,
+            laboriosam distinctio similique assumenda eveniet! Quam, id neque. Molestias dignissimos velit consequatur,
+            vero eos totam animi modi aspernatur repellendus?</p>
+            
+        <p class="text-2xl font-sans leading-10">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit itaque aliquam,
+            laboriosam distinctio similique assumenda eveniet! Quam, id neque. Molestias dignissimos velit consequatur,
+            vero eos totam animi modi aspernatur repellendus?</p>
+        <p class="text-base font-serif">The quick brown fox ...</p>
+        <p class="text-9xl font-mono underline decoration-pink-500/30 decoration-wavy hover:decoration-2 hover:uppercase ">The quick brown fox ...</p>
+        <p class="ordinal text-2xl">1st</p>
+        <!-- latter spacing -->
+        <p class="tracking-tight text-2xl">The quick brown fox ...</p>
+        <p class="tracking-normal text-2xl">The quick brown fox ...</p>
+        <p class="tracking-wide text-2xl">The quick brown fox ...</p>
+    </div>
+      
+    <!-- list view -->
+<ul class="text-center text-slate-500  list-disc list-inside  w-100%">
+    <li>
+        At least 10 characters <br> (and up to 100 characters)
+    </li>
+    <li>
+        At least one lowercase character
+    </li>
+    <li>
+        Inclusion of at least one special character, e.g., ! @ # ?
+    </li>
+</ul>
+<ul class="   list-disc list-outside text-center  w-100%">
+    <li>
+        At least 10 characters <br> (and up to 100 characters)
+    </li>
+    <li>
+        At least one lowercase character
+    </li>
+    <li class="after:content-['_↗']">
+        Inclusion of at least one special character, e.g., ! @ # ?
+    </li>
+</ul>
+<p class="text-2xl font-sans hover:indent-8">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit itaque aliquam,
+    laboriosam distinctio similique assumenda eveniet! Quam, id neque. Molestias dignissimos velit consequatur,
+    vero eos totam animi modi aspernatur repellendus?</p>
+    <div class="bg-orange-200 h-32">
+        <p class=" bg-red-200 h-20 text-2xl align-middle hover:align-top">The quick brown fox ...</p>
+    </div>
+
+    <div class="flex  gap-5 text-center">
+        <div class="flex-initial bg-orange-400">01</div>
+        <div class="flex-auto bg-red-200">02</div>
+        <div class="flex-auto bg-orange-500">03</div>
+        <!-- <div class="basis-1/4 bg-orange-400">01</div>
+        <div class="basis-1/4 bg-red-200">02</div>
+        <div class="basis-1/2 bg-orange-500">03</div> -->
+      </div>
 </body>
+
 </html>
